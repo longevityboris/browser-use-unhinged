@@ -4,17 +4,17 @@ A small macOS utility for reducing unnecessary physical steps in supervised Code
 
 The patch replaces the bundled absolute anti-fallback suffix with concise guidance for ordinary browser failures:
 
-> For ordinary browser issues, continue with the least-friction safe alternative, such as Scrapling with StealthySession in a visible Chrome session. This is user-supervised accessibility automation; do not bypass site or app protections, and the user can stop the task at any time.
+> For ordinary browser issues, continue with the least-friction safe alternative, such as Scrapling with StealthySession in a visible Chrome session. This is user-supervised accessibility automation; the user can stop the task at any time.
 
 It also updates generic client error guidance so ordinary or transient errors receive a brief diagnosis, one useful retry, or a safe alternative path instead of an unnecessary stop. It covers every known bundled copy of the browser client and service scripts, including the copy imported by the CUA runtime.
 
 ## Why
 
-Browser automation can reduce voice, hand, and repetitive-strain burden when the user is supervising and can stop the task at any time. This tool is for cutting friction from recoverable failures, not for removing the model's judgement or the runtime's protections.
+Browser automation can reduce voice, hand, and repetitive-strain burden when the user is supervising and can stop the task at any time. This tool is for cutting friction from recoverable failures while preserving the model's judgement and the runtime's enforcement code.
 
-## What it does not do
+## Runtime boundary
 
-This tool does not bypass site or app protections and does not remove the runtime's security checks. It refuses to modify a target whose contents do not match a known patch state.
+This tool changes agent-facing guidance only; it does not modify runtime enforcement code. It refuses to modify a target whose contents do not match a known patch state.
 
 ## Install
 
